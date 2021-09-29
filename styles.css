@@ -28,7 +28,7 @@ video {
     width: 600px;
 }
 div.about{
-    margin: 60px 80px 50px 80px;
+    margin: 50px 20px 50px 20px;
 }
 
 p {
@@ -61,10 +61,6 @@ div.drum {
 
     video {
         width: 100%;
-    }
-
-    .about{
-    margin: 10px;
     }
 
     section article:nth-child(2) {
