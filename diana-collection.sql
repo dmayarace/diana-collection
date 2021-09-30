@@ -7,7 +7,7 @@
 #
 # Host: 127.0.01 (MySQL 5.7.35)
 # Database: diana-collection
-# Generation Time: 2021-09-27 13:21:28 +0000
+# Generation Time: 2021-09-30 10:09:26 +0000
 # ************************************************************
 
 
@@ -21,12 +21,12 @@ SET NAMES utf8mb4;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-# Dump of table steel-drums
+# Dump of table steeldrums
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `steel-drums`;
+DROP TABLE IF EXISTS `steeldrums`;
 
-CREATE TABLE `steel-drums` (
+CREATE TABLE `steeldrums` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
   `manufacturer` varchar(255) NOT NULL DEFAULT '',
@@ -38,19 +38,19 @@ CREATE TABLE `steel-drums` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-LOCK TABLES `steel-drums` WRITE;
-/*!40000 ALTER TABLE `steel-drums` DISABLE KEYS */;
+LOCK TABLES `steeldrums` WRITE;
+/*!40000 ALTER TABLE `steeldrums` DISABLE KEYS */;
 
-INSERT INTO `steel-drums` (`id`, `name`, `manufacturer`, `inches`, `notes`, `color`, `cost`, `img-url`)
+INSERT INTO `steeldrums` (`id`, `name`, `manufacturer`, `inches`, `notes`, `color`, `cost`, `img-url`)
 VALUES
-	(1,'Hang Drum','PanArt',20,8,'Blue/Black',15000.00,'PANART.jpeg'),
-	(2,'Tongue Drum','DEECOZY',6,8,'Moss Blue',21.99,'TONGUE.jpeg'),
+	(1,'Hang Drum','PanArt',20,8,'Blue/Black',15000.00,'PANART1.png'),
+	(2,'Tongue Drum','DEECOZY',6,8,'Moss Blue',21.99,'TONGUE.png'),
 	(3,'Romanian Hijaz','Meridian',21,10,'Brass',1165.00,'MERIDIAN.png'),
 	(4,'Harmonic Handpan','Vevor',22,9,'Dark Brown',385.99,'VEVOR.png'),
 	(5,'AS Handpan','CGDX',22,13,'Blue',5221.99,'ASHANDPAN.png'),
 	(6,'Tank Drum','Bubbhatankdrums',8,10,'Heated Gold',117.92,'TANK.png');
 
-/*!40000 ALTER TABLE `steel-drums` ENABLE KEYS */;
+/*!40000 ALTER TABLE `steeldrums` ENABLE KEYS */;
 UNLOCK TABLES;
 
 

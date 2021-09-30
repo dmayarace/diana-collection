@@ -19,7 +19,7 @@ function getDb(){
  * @return array drums retrieved from the database
  */
 function retrieveDrums(PDO $db) : array {
-    $query = $db->prepare("SELECT steeldrums.`name`, steeldrums.`manufacturer`, steeldrums.`inches`, steeldrums.`notes`, steeldrums.`color`, steeldrums.`img-url` FROM steeldrums;");
+    $query = $db->prepare("SELECT `name`, `manufacturer`, `inches`, `notes`, `color`, `img-url` FROM steeldrums;");
     $query->execute();
     return $query->fetchAll();
 }
