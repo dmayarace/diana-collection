@@ -1,17 +1,58 @@
+
 <?php
-//Create PDO connection including et fetch mode
 
-$db = new PDO('mysql:host=db; dbname=diana-collection', 'root', 'password');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+require_once 'functions.php';
 
-$query = $db->prepare("SELECT steeldrums.`name`, steeldrums.`manufacturer`, steeldrums.`inches`, steeldrums.`notes`, steeldrums.`color`, steeldrums.`cost`, steeldrums.`img-url` FROM steeldrums;");
+$db = getDb();
+$drums = retrieveDrums($db);
+$drumHtml = displayDrumHtml($drums);
 
-$query->execute();
 
-$result = $query->fetchAll();
-var_dump($result);
-
-foreach ($result as $drum) {
-    echo 'name: '.$drum['name'] . ',manufacturer: ' . $drum['manufacturer']. ',inches: ' . $drum['inches']. ',notes: ' . $drum['notes']. ',color: ' . $drum['color']. 'cost: ' .$drum['cost']. 'img-url' . $drum['img-url'].'<br>';
-}
 ?>
+
+
+
+<!DOCTYPE html>
+<html lang="en-GB">
+
+
+<head>
+    <title>Steel Drums Collection</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" >
+
+</head>
+<body>
+
+<header>
+    <h1>Welcome</h1>
+</header>
+
+<section>
+    <div class="vid">
+        <video controls>
+            <source src=”http://techslides.com/demos/sample-videos/small.ogv” type="video/ogg">
+            <source src="videoOne.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="about">
+        <p> Allow me to tell you a little story about how I first came across my first hang drum. It was a sunny October in Barcelona.
+            Wandering the narrow mysterious cobbled streets, we ended up in a small square where you could enjoy the weather as you sipped the local Sangria.
+            Very potent there, I must add. Anyhow, it seemed like the perfect place to relax. So there we were for a few hours.
+            20mins in we heard one of the most beautiful sounds playing across the square. A traveler was playing what looked like a
+            flying saucer. After taking us on a journey with the sound of his music he came over for donations. That's the
+            moment I fell in love and discovered a whole new world of drums.
+        </p>
+    </div>
+</section>
+
+<section class="collection">
+    <div class="info">
+        <?php
+        echo $drumHtml;
+        ?>
+    </div>
+</section>
+
+</body>
+</html>
+
