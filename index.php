@@ -30,8 +30,7 @@ $drumHtml = displayDrumHtml($drums);
 <section>
     <div class="vid">
         <video controls>
-            <source src=”http://techslides.com/demos/sample-videos/small.ogv” type="video/ogg">
-            <source src="videoOne.mp4" type="video/mp4">
+            <source src="optionTwo.mp4" type="video/mp4">
         </video>
     </div>
     <div class="about">
